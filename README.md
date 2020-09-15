@@ -1,4 +1,4 @@
-<img src="a3b1186a-bdde-11e4-8cf3-00144feab7de.html" style="width: 800px;">
+<img src="a3b1186a-bdde-11e4-8cf3-00144feab7de.png" style="width: 800px;">
 
 # Analysing-Twitter-Data-to-Predict-the-Price-of-Stock-Market-Indices
 
