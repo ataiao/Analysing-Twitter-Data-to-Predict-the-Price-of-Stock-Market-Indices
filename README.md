@@ -1,4 +1,4 @@
-<img src="Screenshot 2020-09-17 at 08.35.43.png" style="width: 800px;">
+<img src="README.assets/Screenshot 2020-09-17 at 08.35.43.png" style="width: 800px;">
 
 # Capstone Individual Project (5-week timeframe):
 
