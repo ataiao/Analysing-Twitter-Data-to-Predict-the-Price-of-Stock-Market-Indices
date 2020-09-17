@@ -1,4 +1,4 @@
-<img src="a3b1186a-bdde-11e4-8cf3-00144feab7de.png" style="width: 800px;">
+<img src="Screenshot 2020-09-17 at 08.35.43.png" style="width: 800px;">
 
 # Capstone Individual Project (5-week timeframe):
 
