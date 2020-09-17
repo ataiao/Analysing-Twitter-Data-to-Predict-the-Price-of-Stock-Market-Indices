@@ -1,11 +1,22 @@
 <img src="a3b1186a-bdde-11e4-8cf3-00144feab7de.png" style="width: 800px;">
-# General Assembly Data Science Immersive
+
+## Capstone Individual Project (5-week timeframe):
 
 ## Analysing Twitter Data to Predict the Price of Stock Market Indices (FTSE)
 
-The final 5 weeks of the course were spent working on a solo Capstone project, where I built a model that predicted (FTSE) Index Stock Returns using Twitter Sentiment. First, I began the process of getting the DataFrame. I scraped Twitter Data, and conducted VADER sentiment analysis on the dataset. Followed by EDA, Data Visualisation, consolidating and cleaning the data.
- 
- Second step was to apply modelling techniques on the dataset and analyse the model’s performance against the Baseline. The results of the Linear Regression model highlighted that this was a poor model to use, as the score was lower than the baseline. Be that as it may, I ‘backtested’ and devised a trading strategy that predicted the direction and return of the stock index. I managed to get cumulative P&L scores, which showed from an economic perspective that it is a good course of action. 
- 
-In summary, I found that Twitter sentiment reflects the mood of the market, and that Twitter can be used to predict future stock market movements. Moreover, the trading strategy worked, through ‘backtesting’ I found it is possible to generate profits over time.
+## Executive Summary
+Five-week final project for my General Assembly Data Science Immersive programme. 
+
+I conducted an exploratory study; The aim of which was to investigate if sentiment expressed on Twitter has an effect on Price of Individual Stock Market Indices (FTSE).
+- Can Twitter Data be used to predict the Price of an Index up to one day ahead?
+- Is Twitter a suitable data source to help forecast future stock market movement?
+
+## Abstract
+The five-week final project for my General Assembly data science immersive programme. I built a model that predicted (FTSE) Index Stock Returns using Twitter Sentiment.
+
+The first step involved constructing the dataframe. I scraped Twitter and conducted Vader sentiment analysis on the dataset, I then downloaded the FTSE historical data, created the Returns column, and joined the two dataframes together to get the final dataset. 
+
+The second step involves the application of modelling techniques on the dataset, I applied Linear Regression modelling. The results highlighted that this was a poor model, the predicted score was lower than the baseline (0.0.0022320050_LR). From a statistical point of view its a pretty bad model, but it is important to look from an economic perspective. 
+
+For the final part of the project, I conducted a backtest and devised a trading strategy that predicted the direction and return of the FTSE index. I established cumulative P&L scores, which showed that from an economic perspective that it is a good course of action.
 
