@@ -1,6 +1,7 @@
 <img src="a3b1186a-bdde-11e4-8cf3-00144feab7de.png" style="width: 800px;">
+# General Assembly Data Science Immersive
 
-# Analysing-Twitter-Data-to-Predict-the-Price-of-Stock-Market-Indices
+## Analysing Twitter Data to Predict the Price of Stock Market Indices (FTSE)
 
 The final 5 weeks of the course were spent working on a solo Capstone project, where I built a model that predicted (FTSE) Index Stock Returns using Twitter Sentiment. First, I began the process of getting the DataFrame. I scraped Twitter Data, and conducted VADER sentiment analysis on the dataset. Followed by EDA, Data Visualisation, consolidating and cleaning the data.
  
