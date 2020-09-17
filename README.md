@@ -39,10 +39,11 @@ Make a Decision on which position to take based on Twitter sentiment at the clos
 - Having a “long” position in a security means that you own the security. Investors maintain “long” security positions in the expectation that the stock will rise in value in the future. The opposite of a “long” position is a “short” position.
 - A "short" position is generally the sale of a stock you do not own. Investors who sell short believe the price of the stock will decrease in value. If the price drops, you can buy the stock at the lower price and make a profit.
 
-- Choose a position either long or short depending on if the twitter sentiment score on a specific date is greater or lower than the last weeks/ 5 business days (time period) average.
+Choose a position either long or short depending on if the twitter sentiment score on a specific date is greater or lower than the last weeks/ 5 business days (time period) average.
 
--   Sharpe Ratio 
+Sharpe Ratio 
 -  Sharpe Ratio is used to help investors understand the return of an investment compared to its risk. The ratio is the average return earned in excess of the risk-free rate per unit of volatility or total risk. Volatility is a measure of the price fluctuations of an asset or portfolio. Basically, reflects the consistency of the return.
+
 - Sharpe Ratio Optimization/ Gridsearch
 
 - Analyse the (CAGR) Compound Annual Growth Rate for different columns
@@ -51,7 +52,8 @@ Make a Decision on which position to take based on Twitter sentiment at the clos
 Presented the findings to a non-technical audience. Covering the goals, success criteria, challenges, findings, risks and limitations, the impact of the findings as well as the next steps and conclusion.
 
 ## Findings and Overview
-Accept the two hypothesis.
+- Accept the two hypothesis.
+
 The results indicate that Twitter data is a suitable source to help understand and forecast future stock market movements.
 Sentiment extracted from Twitter has significant predictive power for predicting the direction of stock Returns.
 
