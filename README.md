@@ -18,9 +18,11 @@ I conducted an exploratory study; The aim of which was to investigate if sentime
 1. Twitter Sentiment reflects the mood of the market.
 2. Twitter can be used to predict the direction of future stock market movements.
 
-## Project Layout
+# Project Layout
 
-### Part 1a: Scraping Twitter and Assign Sentiment Scores
+## Part 1a: Data Preparation
+When starting this project, the biggest challenge i faced was scraping Twitter, and consolidating the DataFrame.
+#### Scraping Twitter and Assign Sentiment Scores
 Most time consuming part of the project.
 <img src="README.assets/Screenshot 2020-09-17 at 08.35.05.png" style="width: 800px;">
 
@@ -32,14 +34,16 @@ Description of the process
 The shifted regression will not be a good fit. But its good nevertheless, because i conducted a backtest which shows that economically it is good option.
 Discuss the baseline and LR scores
 
+#### Results
+
 ### Part 3: Backtesting and devising a Trading Strategy
-Make a Decision on which position to take based on Twitter sentiment at the closing time.
+#### Make a Decision on which position to take based on Twitter sentiment at the closing time.
 - Having a “long” position in a security means that you own the security. Investors maintain “long” security positions in the expectation that the stock will rise in value in the future. The opposite of a “long” position is a “short” position.
 - A "short" position is generally the sale of a stock you do not own. Investors who sell short believe the price of the stock will decrease in value. If the price drops, you can buy the stock at the lower price and make a profit.
 
 Choose a position either long or short depending on if the twitter sentiment score on a specific date is greater or lower than the last weeks/ 5 business days (time period) average.
 
-Sharpe Ratio 
+#### Sharpe Ratio 
 -  Sharpe Ratio is used to help investors understand the return of an investment compared to its risk. The ratio is the average return earned in excess of the risk-free rate per unit of volatility or total risk. Volatility is a measure of the price fluctuations of an asset or portfolio. Basically, reflects the consistency of the return.
 
 - Sharpe Ratio Optimization/ Gridsearch
