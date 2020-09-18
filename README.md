@@ -1,7 +1,5 @@
-# Capstone Individual Project (5-week timeframe):
+# General Assembly Capstone Project: Analysing Twitter Data to Predict the Price of Stock Market Indices (FTSE)
 <img src="README.assets/Screenshot 2020-09-17 at 08.35.43.png" style="width: 800px;">
-## Analysing Twitter Data to Predict the Price of Stock Market Indices (FTSE)
-
 The ability to predict asset prices would be highly valuable for investors and other parties. Consequently, the field of stock market prediction has received a great deal of attention from both academia and businesses. Behavioural finance research shows that our emotion and mood plays a large and important role in our financial decision-making.Therefore, it is reasonable to assume that the public sentiment, mood and opinion may affect the stock market prices and movements. For this project i aim to find out if sentiment extracted from Twitter can be used to predict the direction of Returns of a Stock Market Index.
 
 ## Abstract
