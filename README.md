@@ -8,6 +8,17 @@ The second step involves the application of modelling techniques on the dataset,
 
 For the final part of the project, I conducted a backtest and devised a trading strategy that predicted the direction and return of the FTSE index. I established cumulative P&L scores, which showed that from an economic perspective that it is a good course of action.
 
+## Files in This Repository
+- Presentation Slides: This was prepared to present the projectm findings, results, adn reccomendations to a non-technical audience
+- Technical Report: This was prepared for reporting and explaining my project to a technical audience. It offers a detailed explanation of thea literature review, data cleaning, feature engineering process, exploratory data analysis, findings per research question, limitations and recommendations for future research.
+
+#### - Jupyter notebook
+  - Step 1: Dataset and Data Collection
+  - Step 2: Data Cleaning and Exploratory Data Analysis
+  - Step 3: Data Modelling
+  - Step 4: Backtesting and Devising a Trading Strategy
+
+
 ## Objectives
 Five-week final project for my General Assembly Data Science Immersive programme. 
 
@@ -31,6 +42,13 @@ Description of the process
 
 ### Part 2: Modelling
 <img src="README.assets/Screenshot 2020-09-17 at 09.16.01.png" style="width: 800px;">
+#### Model Selection: Linear Regression
+
+#### Classification( Long or short)
+Logistic Regression
+KNN
+Random Forests
+
 The shifted regression will not be a good fit. But its good nevertheless, because i conducted a backtest which shows that economically it is good option.
 Discuss the baseline and LR scores
 
