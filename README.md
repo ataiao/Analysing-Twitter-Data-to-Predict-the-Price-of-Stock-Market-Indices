@@ -15,8 +15,9 @@ For the final part of the project, I conducted a ‘Backtest’ and devised a tr
 #### - The Code for this Project can be found [here](https://nbviewer.jupyter.org/github/ataiao/Analysing-Twitter-Data-to-Predict-the-Price-of-Stock-Market-Indices/blob/master/FTSE_%20sentiment_twitter%20code.ipynb)
   - Step 1: Dataset and Data Collection
   - Step 2: Data Cleaning and Exploratory Data Analysis
-  - Step 3: Data Modelling
-  - Step 4: Backtesting and Devising a Trading Strategy
+  - Step 3: Backtesting and Devising a Trading Strategy
+  - Step 4: Data Modelling
+
   
 ## The Problem
 The ability to predict asset prices would be highly valuable for investors and other parties. Consequently, the field of stock market prediction has received a great deal of attention from both academia and businesses. Behavioural finance research shows that our emotion and mood play a large and important role in our financial decision-making. Therefore, it is reasonable to assume that the public sentiment, mood and opinion may affect the stock market prices and movements. For this project I aim to find out if sentiment extracted from Twitter can be used to predict the direction of Returns of a Stock Market Index.
