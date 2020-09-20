@@ -135,6 +135,27 @@ After scraping twitter, I ended up with a total of 2,497,676 tweets along with t
 The Second step involved consolidating the individual tweet scores into a mean sentiment score of the specific day they were tweeted. I grouped the tweets into bin dates. Stock exchanges close at 4.00pm. Because of this I assigned tweets tweeted after 4.00pm to the next working day. This also applies to holidays and weekend tweets, which were assigned to Monday.
 Finally, I created three new columns score_retweets, score_replies, and score_favorites, which were the mean and weighted mean (favorites, retweets, replies) score of all tweets for specific days. 
 
+	from pandas.tseries.offsets import BDay
+	df.date = pd.to_datetime(df.date)
+	df['hours'] = df['date'].dt.hour
+	df['new_date'] = pd.to_datetime(df['date'].dt.date)
+	df['bindate'] = np.where(df['hours']<16,df['new_date']+BDay(0),df['new_date']+BDay(1))
+	df = df.set_index('bindate')
+	df.to_csv(f'Equity_sentiment_twitter/{index}_consolidated/tweets_and_sentiment_consolidated_with_sentiment_binned.csv')
+	print(df[['date','hours','new_date']])
+	df = df[df.score!=0]
+	print(df[['date','hours','new_date']])
+
+	for var in ['retweets','favorites','replies']: #Weighing the columns
+	    df[f'score_{var}'] = df.score * df[var]
+	df = df.groupby(df.index).agg({'score':'mean','score_retweets':'sum','score_replies':'sum','score_favorites':'sum','retweets':'sum','favorites':'sum','replies':'sum'})
+	for var in ['retweets','favorites','replies']:
+	    df[f'score_{var}']  = df[f'score_{var}']  / df[var].replace(0,1)
+	df
+	#df.to_csv(f'Equity_sentiment_twitter/{index}_consolidated/tweets_and_sentiment_consolidated_with_sentiment_binned.csv')
+
+
+
 Got the first part of the DataFrame which was 3293 rows.
 
 <img src="README.assets/Screenshot 2020-09-20 at 20.35.55.png" style="width: 800px;">
