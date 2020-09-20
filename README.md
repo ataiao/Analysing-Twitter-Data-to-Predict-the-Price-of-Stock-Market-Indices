@@ -9,8 +9,7 @@ For this project I had to develop my own dataset. I scraped tweets that mentione
 For the final part of the project, I conducted a ‘Backtest’ and devised a trading strategy that predicted the direction and return of the FTSE index. I established cumulative P&L scores, which revealed that from an economic perspective that it is a good course of option.
 
 ## Files in This Repository
-- Presentation Slides: This was prepared to present the projects findings, results, and reccomendations to a non-technical audience
-- Technical Report: This was prepared for reporting and explaining my project to a technical audience. It offers a detailed explanation of thea literature review, data cleaning, feature engineering process, exploratory data analysis, findings per research question, limitations and recommendations for future research.
+- [**Presentation Slides**](https://github.com/ataiao/Analysing-Twitter-Data-to-Predict-the-Price-of-Stock-Market-Indices/blob/master/README.assets/Capstone%20Final%20(1).pdf): This was prepared to present the projects findings, results, and reccomendations to a non-technical audience.
 
 #### - The Code for this Project can be found [here](https://nbviewer.jupyter.org/github/ataiao/Analysing-Twitter-Data-to-Predict-the-Price-of-Stock-Market-Indices/blob/master/FTSE_%20sentiment_twitter%20code.ipynb)
   - Step 1: Dataset and Data Collection
@@ -112,7 +111,7 @@ The VADER library is limited when conducting analysis on financial subject matte
 
 	analyzer.lexicon.update(new_words_dict)
 
-#### Consolidating Tweets and Sentiment scores into oone CSV file (500MB)
+#### Consolidating Tweets and Sentiment scores into one CSV file (500MB)
 
 	df = []
 	# dt_range = pd.date_range(start=datetime(2011,1,1),end=datetime(2011,1,31))
