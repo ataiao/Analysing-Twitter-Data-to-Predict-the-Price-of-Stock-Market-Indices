@@ -9,10 +9,11 @@ For this project I had to develop my own dataset. I scraped tweets that mentione
 For the final part of the project, I conducted a ‘Backtest’ and devised a trading strategy that predicted the direction and return of the FTSE index. I established cumulative P&L scores, which revealed that from an economic perspective that it is a good course of option.
 
 ## Files in This Repository
-- Presentation Slides: This was prepared to present the projectm findings, results, adn reccomendations to a non-technical audience
+- Presentation Slides: This was prepared to present the projects findings, results, and reccomendations to a non-technical audience
 - Technical Report: This was prepared for reporting and explaining my project to a technical audience. It offers a detailed explanation of thea literature review, data cleaning, feature engineering process, exploratory data analysis, findings per research question, limitations and recommendations for future research.
 
-#### - Jupyter notebook
+#### - The Code for this Project can be found [here]
+(https://nbviewer.jupyter.org/github/ataiao/Analysing-Twitter-Data-to-Predict-the-Price-of-Stock-Market-Indices/blob/master/FTSE_%20sentiment_twitter%20code.ipynb)
   - Step 1: Dataset and Data Collection
   - Step 2: Data Cleaning and Exploratory Data Analysis
   - Step 3: Data Modelling
@@ -174,7 +175,7 @@ I noticed there was inconsistent data prior to 2013 so I conducted the visualisa
 
 
 
-### Modelling: Linear Regression
+## Modelling: Linear Regression
 <img src="README.assets/Screenshot 2020-09-17 at 09.16.01.png" style="width: 800px;">
 After conducting EDA on the dataset, it was clear that the shifted linear regression (LR) won’t be a good fit, there is high daily volatility in the stock. The results of LR confirmed this, the model performs poorly. The LR score 0.0022320055663610505 is lower than baseline score 0.028240040342914774, from a statistical point of view, it’s clearly a very bad model.  Nonetheless, because of the projects narrative it’s more central to explore the economical aspect.
 
@@ -188,9 +189,10 @@ To explore the economic perspective, I ‘backtested’, this is a key component
 
 ### Evaluate the Accumulated Returns | Profit & Loss Vector
 
-- The Trading Strategy: Choose a position either long or short depending on if the twitter sentiment score on a specific date is greater or lower than the last weeks/ 5 business days (time period) average. 
+The Trading Strategy: Choose a position either long or short depending on if the twitter sentiment score on a specific date is greater or lower than the last weeks/ 5 business days (time period) average. 
 
-Make a Decision on which position to take based on Twitter sentiment at the closing time.
+#### Make a Decision on which position to take based on Twitter sentiment at the closing time.
+
 - Having a “long” position in a security means that you own the security. Investors maintain “long” security positions in the expectation that the stock will rise in value in the future. The opposite of a “long” position is a “short” position.
 - A "short" position is generally the sale of a stock you do not own. Investors who sell short believe the price of the stock will decrease in value. If the price drops, you can buy the stock at the lower price and make a profit.
 
@@ -223,7 +225,7 @@ Trading Strategy Code:
 
 The Cumulative P&L for Score Replies(0.825) and Score Favorites(0.6) are much higher in comparison to other variables. The two variables are predictive anf generate a positive P&L.
 
-This may be caused by a Combination of Factors:
+#### This may be caused by a Combination of Factors:
 
 1. Tweets that get a lot of replies are likely to be opinions/speculations on future stock behavior.
 2. The users that post such speculations are also likely to have a lot of followers.
