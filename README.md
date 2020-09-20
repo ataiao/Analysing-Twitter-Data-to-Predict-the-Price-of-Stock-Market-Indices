@@ -41,7 +41,7 @@ When starting this project, the biggest challenge I faced was scraping twitter. 
 -	Twitter API is limited to scraping 18,000 tweets per a 15-minute window. Because of this I set the maximum number of tweets that can be scraped per day to 1200 so that the scraper isn’t too time consuming (took roughly 3 days to finish).
 -	I extracted the 'date’, ‘text', 'username', 'hashtags', 'favorites', 'retweets', 'mentions', 'replies' from each tweet scraped.
 
-Scraper Code:
+
 
 		def my_pmap(f,jobs,num_procs=10):  
 				return Parallel(n_jobs=num_procs)(delayed(f)(i) for i in jobs)
@@ -85,7 +85,7 @@ Scraper Code:
 
 
 
-### VADDER sentiment analysis
+### VADER sentiment analysis
 The VADER library is limited when conducting analysis on financial subject matters. Important financial terms such as ‘up’, ‘down’, ‘bull’, and ‘bear’ aren’t in the dictionary.  So, I added certain words which I considered to be an important addition into the library. Furthermore, after finding out about VADER’s limitations, I decided to incorporate the Loughran-McDonald finance word dictionary into its library so as to make the sentiment scores more precise. 
 
 	from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
@@ -111,7 +111,7 @@ The VADER library is limited when conducting analysis on financial subject matte
 
 	analyzer.lexicon.update(new_words_dict)
 
-### Consolidate the Tweets and their sentiment scores into one big file. (500MB)
+#### Consolidating Tweets and Sentiment scores into oone CSV file (500MB)
 
 	df = []
 	# dt_range = pd.date_range(start=datetime(2011,1,1),end=datetime(2011,1,31))
@@ -211,7 +211,7 @@ Trading Strategy Code:
 	    plot_pnl(cumpnl)
 	    plt.title(var)
 
-#### The Process of Getting Trading Strategy ^
+### The Process of Getting Trading Strategy ^
 -	Set a Position Vector (Get a mean zero. This subtracts the Bias)
 -	Convert it to 1 or -1 (Long or Short)
 -	Profit & Loss, look at the position taken yesterday and todays Return (I.e. If we chose Long yesterday and Return today is positive than there is a Profit)
