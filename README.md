@@ -137,7 +137,7 @@ Finally, I created three new columns score_retweets, score_replies, and score_fa
 
 Got the first part of the DataFrame which was 3293 rows.
 
-<img src="README.assets/ftse13.png" style="width: 800px;">
+<img src="README.assets/Screenshot 2020-09-20 at 20.35.55.png" style="width: 800px;">
 
 The second data point required for the final dataset was the FTSE’s historical data since 2007, I downloaded the data from the wall street journal and then derived the Returns column from the data by calculating. The percentage change of the closing price. Finally, I got the dataset by joining these two DataFrames together.
 
@@ -150,7 +150,7 @@ There weren’t many people using Twitter back in 2007, hence there weren’t ma
 	FTSE_historical = FTSE_historical.rename(columns={'Date': 'bindate',' Close': 'Close'}).set_index('bindate')[['Close', 'Returns']]
 	FTSE_historical
 
-<img src="README.assets/Screenshot 2020-09-20 at 19.40.51.png" style="width: 800px;">
+<img src="README.assets/Screenshot 2020-09-20 at 20.37.16.png" style="width: 800px;">
 
 
 
