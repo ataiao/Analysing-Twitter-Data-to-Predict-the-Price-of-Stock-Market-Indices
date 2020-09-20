@@ -42,6 +42,7 @@ When starting this project, the biggest challenge I faced was scraping twitter. 
 -	I extracted the 'date’, ‘text', 'username', 'hashtags', 'favorites', 'retweets', 'mentions', 'replies' from each tweet scraped.
 
 Scraper Code:
+
 		def my_pmap(f,jobs,num_procs=10):  
 				return Parallel(n_jobs=num_procs)(delayed(f)(i) for i in jobs)
 
