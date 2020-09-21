@@ -280,11 +280,11 @@ Created a new optimal_score column, whose Sharpe ratio was 0.6836777690933067 an
 <img src="README.assets/Screenshot 2020-09-20 at 19.57.02.png" style="width: 800px;">
 
 ## Findings and Overview
-- Accept the two Hypothesis.
+- Accept the ***two*** Hypothesis.
 
-Twitter sentiment does reflect the mood of the market. 
+#### 1.Twitter sentiment does reflect the mood of the market. 
 
-Twitter can be used to predict future stock market movements.
+#### 2.Twitter can be used to predict future stock market movements.
 
 - The results indicate that Twitter data is a suitable source to help understand and forecast future stock market movements.
 
