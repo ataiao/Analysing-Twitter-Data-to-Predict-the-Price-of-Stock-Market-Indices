@@ -290,4 +290,4 @@ Twitter can be used to predict future stock market movements.
 
 - Sentiment extracted from Twitter has significant predictive power for predicting the direction of stock Returns.
 
-#### The Trading Strategy works, and proves that it is possible to generate profits over a large timeframe by only Twitter.
+#### Twitter can capture important information regarding the forecasting of future stock returns. The results convey this as the trading strategy works; it is possible to generate profits over a far-ranging timeframe. The findings from this project demonstrate practical importance for the construction of prospective high-frequency investment strategies.
