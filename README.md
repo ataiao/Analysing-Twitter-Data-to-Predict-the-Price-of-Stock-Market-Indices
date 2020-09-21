@@ -253,7 +253,7 @@ The Cumulative P&L for Score Replies(0.825) and Score Favorites(0.6) are much hi
 
 ### Evaluating The Trading Strategy
 
-#### (CAGR) Compound Annual Growth Rate
+#### Compound Annual Growth Rate (CAGR) 
 - Score Replies: 8.24%
 - Score Favorites: 6.38%
 - Inflation Rate 2017: 2.56%
