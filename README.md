@@ -173,7 +173,7 @@ There weren’t many people using Twitter back in 2007, hence there weren’t ma
 
 
 
-### Exploratory Data Analysis(EDA)
+### Exploratory Data Analysis (EDA)
 Calculated the summary statistics. Firstly, I analysed of contemporaneous correlation between the different Scores (‘score’, ‘score_retweets’, ‘score_replies’, ‘score_favorites’) and Returns. Secondly, I analysed the shifted correlation i.e. the correlation between todays scores and the next day’s Returns.
 
 I noticed there was inconsistent data prior to 2013 so I conducted the visualisation techniques for the dataset after 2013 (ftse2013). 
