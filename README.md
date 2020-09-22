@@ -4,7 +4,7 @@
 ## Executive Summary
 Four-week final project for my General Assembly data science immersive course. I conducted an exploratory study to ascertain whether sentiment extracted from Twitter can be used to predict the price of stock market indices (FTSE).
 
-For this project I had to develop my own dataset. I scraped tweets that mentioned a particular Index (‘FTSE’) from Twitter and conducted Vader sentiment analysis on individual tweets. I then applied a range of Data Mining techniques, this involved formatting and combining different datapoints. I downloaded the FTSE's historical data, and created the Returns column (percentage change of the Closing price), proceeded to join the two DataFrame’s together to get the final dataset. Subsequently, i carried out Exploratory Data Analysis (EDA), where I calculated the correlation between mean twitter sentiment and the Returns. The second step involved the application of modelling techniques on the dataset, I applied Linear Regression modelling. The results highlighted that this was a poor model, the predicted score was lower than the baseline (0.0.0022320050_LR). From a statistical point of view, it’s clearly a very bad fit. Nevertheless, because of the projects narrative it’s more central to explore the economical aspect. For the final part of the project, I conducted a ‘Backtest’ and devised a trading strategy that predicted the direction of stock Returns for the FTSE index.
+For this project, I had to develop my own dataset. I scraped tweets that mentioned a particular Index (‘FTSE’) from Twitter and conducted Vader sentiment analysis on individual tweets. I then applied a range of Data Mining techniques, this involved formatting and combining different datapoints. I downloaded the FTSE's historical data, and created the Returns column (percentage change of the Closing price), proceeded to join the two DataFrame’s together to get the final dataset. Subsequently, I carried out Exploratory Data Analysis (EDA), where I calculated the correlation between mean twitter sentiment and the Returns. The second step involved the application of modelling techniques on the dataset, I applied Linear Regression modelling. The results highlighted that this was a poor model, the predicted score was lower than the baseline (0.0.0022320050_LR). From a statistical point of view, it’s clearly a very bad fit. Nevertheless, because of the projects narrative it’s more central to explore the economical aspect. For the final part of the project, I conducted a ‘Backtest’ and devised a trading strategy that predicted the direction of stock Returns for the FTSE index.
 
 ## Files in This Repository
 - [**Presentation Slides**](https://github.com/ataiao/Analysing-Twitter-Data-to-Predict-the-Price-of-Stock-Market-Indices/blob/master/README.assets/Capstone%20Final%20(1).pdf): This was prepared to present the projects findings, results, and reccomendations to a non-technical audience.
@@ -17,10 +17,10 @@ For this project I had to develop my own dataset. I scraped tweets that mentione
 
   
 ## The Problem
-The ability to predict asset prices would be highly valuable for investors and other parties. Consequently, the field of stock market prediction has received a great deal of attention from both academia and businesses. Behavioural finance research shows that our emotion and mood play a large and important role in our financial decision-making. Therefore, it is reasonable to assume that the public sentiment, mood and opinion may affect the stock market prices and movements. For this project I aim to find out if sentiment extracted from Twitter can be used to predict the direction of Returns of a Stock Market Index.
+The ability to predict asset prices would be highly valuable for investors and other parties. Consequently, the field of stock market prediction has received a great deal of attention from both academia and businesses. Behavioural finance research shows that our emotion and mood play a large and important role in our financial decision-making. Therefore, it is reasonable to assume that the public sentiment, mood and opinion may affect the stock market prices and movements. For this project, I aim to find out if sentiment extracted from Twitter can be used to predict the direction of Returns of a Stock Market Index.
 
 ## Objectives
-Exploratory study; The aim is to investigate if sentiment expressed on Twitter has an effect on Price of Individual Stock Market Indices (FTSE).
+Exploratory study: The aim is to investigate if sentiment expressed on Twitter has an effect on Price of Individual Stock Market Indices (FTSE).
 
 -	Can Twitter Data be used to predict the Price of an Index up to one day ahead?
 -	Is Twitter a suitable data source to help forecast future stock market movement?
@@ -36,7 +36,7 @@ Exploratory study; The aim is to investigate if sentiment expressed on Twitter h
 When starting this project, the biggest challenge I faced was scraping twitter. Constructing and running the Twitter Scraper was the most time-consuming part of the project. 
 
 -	I wanted to get data that covered a full economic cycle, so i set the date range from February 2007, a few months prior to the burst of the housing bubble in the US.
--	Twitter API is limited to scraping 18,000 tweets per a 15-minute window. Because of this I set the maximum number of tweets that can be scraped per day to 1200 so that the scraper isn’t too time consuming (took roughly 3 days to finish).
+-	Twitter API is limited to scraping 18,000 tweets per a 15-minute window. Because of this, I set the maximum number of tweets that can be scraped per day to 1200 so that the scraper isn’t too time consuming (took roughly 3 days to finish).
 -	I extracted the 'date’, ‘text', 'username', 'hashtags', 'favorites', 'retweets', 'mentions', 'replies' from each tweet scraped.
 
 
@@ -83,7 +83,7 @@ When starting this project, the biggest challenge I faced was scraping twitter. 
 
 
 
-### VADER sentiment analysis
+### VADER Sentiment Analysis
 The VADER library is limited when conducting analysis on financial subject matters. Important financial terms such as ‘up’, ‘down’, ‘bull’, and ‘bear’ aren’t in the dictionary.  So, I added certain words which I considered to be an important addition into the library. Furthermore, after finding out about VADER’s limitations, I decided to incorporate the Loughran-McDonald finance word dictionary into its library so as to make the sentiment scores more precise. 
 
 	from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
@@ -129,8 +129,8 @@ The VADER library is limited when conducting analysis on financial subject matte
 ### Data Mining: Cleaning the Data 
 Applied a wide range of data mining techniques. 
 
-After scraping twitter, I ended up with a total of 2,497,676 tweets along with their assigned sentiment scores. After examining the dataset, I noticed that tweets with null sentiment scores were generally off-topic when it came to discussing the financial aspect of the Index. I decided it’s best to remove these tweets, furthermore these tweets can be detrimental when conducting next step of the data mining process.  I was left with 1,360,736 tweets.
-The Second step involved consolidating the individual tweet scores into a mean sentiment score of the specific day they were tweeted. I grouped the tweets into bin dates. Stock exchanges close at 4.00pm. Because of this I assigned tweets tweeted after 4.00pm to the next working day. This also applies to holidays and weekend tweets, which were assigned to Monday.
+After scraping twitter, I ended up with a total of 2,497,676 tweets along with their assigned sentiment scores. After examining the dataset, I noticed that tweets with null sentiment scores were generally off-topic when it came to discussing the financial aspect of the Index. I decided it was best to remove these tweets; furthermore these tweets can be detrimental when conducting next step of the data mining process.  I was left with 1,360,736 tweets.
+The second step involved consolidating the individual tweet scores into a mean sentiment score of the specific day they were tweeted. I grouped the tweets into bin dates. Stock exchanges close at 4.00pm. Because of this, I assigned tweets tweeted after 4.00pm to the next working day. This also applies to holidays and weekend tweets, which were assigned to Monday.
 Finally, I created three new columns score_retweets, score_replies, and score_favorites, which were the mean and weighted mean (favorites, retweets, replies) score of all tweets for specific days. 
 
 	from pandas.tseries.offsets import BDay
@@ -158,7 +158,7 @@ Got the first part of the DataFrame which was 3293 rows.
 
 <img src="README.assets/Screenshot 2020-09-20 at 20.35.55.png" style="width: 800px;">
 
-The second data point required for the final dataset was the FTSE’s historical data since 2007, I downloaded the data from the wall street journal and then derived the Returns column from the data by calculating. The percentage change of the closing price. Finally, I got the dataset by joining these two DataFrames together.
+The second data point required for the final dataset was the FTSE’s historical data since 2007. I downloaded the data from the wall street journal and then derived the Returns column from the data by calculating. The percentage change of the closing price. Finally, I got the dataset by joining these two DataFrames together.
 
 There weren’t many people using Twitter back in 2007, hence there weren’t many tweets about the FTSE. Consequently, there were missing dates in the dataset. Because of this I did a right join to get accurate daily returns.
 
@@ -176,7 +176,7 @@ There weren’t many people using Twitter back in 2007, hence there weren’t ma
 ### Exploratory Data Analysis (EDA)
 Calculated the summary statistics. Firstly, I analysed of contemporaneous correlation between the different Scores (‘score’, ‘score_retweets’, ‘score_replies’, ‘score_favorites’) and Returns. Secondly, I analysed the shifted correlation i.e. the correlation between todays scores and the next day’s Returns.
 
-I noticed there was inconsistent data prior to 2013 so I conducted the visualisation techniques for the dataset after 2013 (ftse2013). 
+I noticed there was inconsistent data prior to 2013; so, I conducted the visualisation techniques for the dataset after 2013 (ftse2013). 
 
 #### score
 - Contemporaneous correlation:	0.32798691276405945
@@ -195,15 +195,15 @@ I noticed there was inconsistent data prior to 2013 so I conducted the visualisa
 
 ## Modelling: Linear Regression
 <img src="README.assets/Screenshot 2020-09-17 at 09.16.01.png" style="width: 800px;">
-After conducting EDA on the dataset, it was clear that the shifted linear regression (LR) won’t be a good fit, there is high daily volatility in the stock. The results of LR confirmed this, the model performs poorly. The LR score 0.0022320055663610505 is lower than baseline score 0.028240040342914774, from a statistical point of view, it’s clearly a very bad model.  Nonetheless, because of the projects narrative it’s more central to explore the economical aspect.
+After conducting EDA on the dataset, it was clear that the shifted linear regression (LR) wouldn't be a good fit, as there is high daily volatility in the stock. The results of LR confirmed this, the model performs poorly. The LR score 0.0022320055663610505 is lower than baseline score 0.028240040342914774, and from a statistical point of view, it’s clearly a very bad model.  Nonetheless, because of the projects narrative, it’s more central to explore the economical aspect.
 
 
 ## Backtesting & Devising a Trading Strategy
-To explore the economic perspective, I ‘backtested’, this is a key component to the development of an effective trading strategy. It is accomplished by reconstructing, with historical data, trades that would have occurred in the past using rules defined by the derived strategy.
+To explore the economic perspective, I ‘backtested’ this is a key component to the development of an effective trading strategy. Fundamentally, 'Backtesting' assesses the viability of a trading strategy by observing how it would play out using historical data. If backtesting works, traders and analysts may have the confidence to employ the trading strategy going forward.
 
 - Trading Strategy: A trading strategy is the method of buying and selling in markets that is based on predefined rules used to make trading decisions.
 
-- Backtesting assesses the viability of a trading strategy by discovering how it would play out using historical data. If backtesting works, traders and analysts may have the confidence to employ it going forward. 
+- A 'Backtest' that yields positive results assures traders that the trading strategy is fundamentally sound and is likely to yield profits when implemented in reality.
 
 ### Evaluate the Accumulated Returns | Profit & Loss Vector
 
@@ -231,7 +231,7 @@ Trading Strategy Code:
 	    plot_pnl(cumpnl)
 	    plt.title(var)
 
-### The Process of Getting Trading Strategy ^
+### The Process of Deriving the Trading Strategy 
 -	Set a Position Vector (Get a mean zero. This subtracts the Bias)
 -	Convert it to 1 or -1 (Long or Short)
 -	Profit & Loss, look at the position taken yesterday and todays Return (I.e. If we chose Long yesterday and Return today is positive than there is a Profit)
@@ -247,9 +247,9 @@ The Cumulative P&L for Score Replies(0.825) and Score Favorites(0.6) are much hi
 
 1. Tweets that get a lot of replies are likely to be opinions/speculations on future stock behavior.
 2. The users that post such speculations are also likely to have a lot of followers.
-3. This can possibly generate a discussion on twitter, and the replies to the tweet could influence other users trading behaviour i.e. users who either read or replied to that tweet.
+3. This can possibly generate a discussion on twitter, and the replies to the tweet could influence other users trading behaviour, i.e. users who either read or replied to that tweet.
 
-- It is highly probable that these speculations/opinions seep through to other trader'd decision making process and hence influence other trader's trading decisions. In this context Correlation may imply that Causation is involved. There is a definite possibility that tweets with high number of favorites(likes) and replies could be influencing trading patterns of retail investors.
+- It is highly probable that these speculations/opinions seep through to other trader's decision making process and hence influence other trader's trading decisions. In this context, Correlation may imply that Causation is involved. There is a definite possibility that tweets with high number of favorites (likes) and replies could be influencing trading patterns of retail investors.
 
 ### Evaluating The Trading Strategy
 
@@ -279,7 +279,7 @@ Created a new optimal_score column, whose Sharpe ratio was 0.6836777690933067 an
 
 <img src="README.assets/Screenshot 2020-09-20 at 19.57.02.png" style="width: 800px;">
 
-## Findings and Overview
+## Findings & Next Steps
 - Accept the ***two*** Hypothesis.
 
 #### 1.Twitter sentiment does reflect the mood of the market. 
@@ -291,3 +291,15 @@ Created a new optimal_score column, whose Sharpe ratio was 0.6836777690933067 an
 - Sentiment extracted from Twitter has significant predictive power for predicting the direction of stock Returns.
 
 #### Twitter can capture important information regarding the forecasting of future stock returns. The results convey this as the trading strategy works; it is possible to generate profits over a far-ranging timeframe. The findings from this project demonstrate practical importance for the construction of prospective high-frequency investment strategies.
+
+In terms of next steps/improvements, I think there are a few things that could be improved or incorporated:
+
+- Increase VADER's lexicon so as to increase the accuracy of tweet's sentiment scores.
+
+- Improve the derived trading strategy, by adding more features and rules to it.
+
+- Finally, I want to analyse Twitter data to predict the price of Gold. Historically, there's been an inverse correlation/relationship between the performance of established Stock Market Indices and Gold. I want to explore this phenomenon and look at devising a trading strategy that incorporates the data from both Indexes. 
+
+
+
+
